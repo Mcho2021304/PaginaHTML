@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Librería Florentina</title>
+    <link rel="Icon" href="../Imagenes/Icono.png"> <link rel="stylesheet" href="../estilos/estilo.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
+<body>
+    <header class="encabezado">
+        <div class="cajaNav">
+            <img src="../Imagenes/Logo.png" alt="logo de la tienda" class="logo-grande">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Paginas/acercade.html">Acerca De Nosotros</a></li>
+                    <li><a href="../Paginas/contacto.html">Contacto</a></li>
+                    <li><a href="../Paginas/ubicacion.html">Estamos Ubicados</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-contacto">
+            <h1 class="titulo-seccion">¡Contáctanos en Librería Florentina!</h1>
+            <p class="descripcion-contacto">¿Tienes preguntas, sugerencias o necesitas ayuda con tu pedido? Estamos aquí para escucharte. Utiliza el formulario a continuación o encuentra otras formas de contactarnos.</p>
+
+            <form class="formulario-contacto">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" class="input-datos-generales" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="input-datos-generales" required>
+
+                <label for="telefono">Número de Teléfono (opcional):</label>
+                <input type="tel" id="telefono" name="telefono" class="input-datos-generales">
+
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" class="input-datos-generales" required>
+
+                <label for="mensaje">Tu Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="6" class="input-datos-generales" required></textarea>
+
+                <input type="submit" value="Enviar Mensaje" class="boton-enviar">
+            </form>
+
+            <div class="info-adicional-contacto">
+                <h2>Otras Formas de Contacto:</h2>
+                <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+50212345678">(+502) 1234-5678</a></p>
+                <p><i class="fas fa-envelope"></i> Correo Electrónico: <a href="mailto:info@libreriaflorentina.com">info@libreriaflorentina.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: 12 Calle "A" 4-50, Zona 1, Ciudad de Guatemala</p>
+                
+                <h3>Síguenos en Redes Sociales:</h3>
+                <div class="redes-sociales">
+                    <a href="https://facebook.com/libreriaflorentina" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/libreriaflorentina" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/libreriaflorentina" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    </body>
+</html>
