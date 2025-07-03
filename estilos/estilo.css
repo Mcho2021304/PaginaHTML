@@ -1,76 +1,77 @@
-/* estilos/estilo.css */
-
+/* Estilos generales del cuerpo de la página */
 body{
-    background-color: rgb(242, 172, 172);
+    background-color: rgb(242, 172, 172); /* Color de fondo del cuerpo */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos para el encabezado (header) */
 .encabezado{
-    background-color: #CCCCCC;
+    background-color: #CCCCCC; /* Color de fondo del encabezado */
     padding: 10px 0;
     position: relative;
-    min-height: 100px; /* Asegura que haya suficiente espacio vertical para el nav */
+    min-height: 100px; /* Asegura suficiente espacio vertical */
 }
 
+/* Contenedor de la navegación dentro del encabezado */
 .cajaNav{
     width: 75%;
     margin: 0 auto;
-    display: flex; /* Contenedor principal que alinea el logo y la navegación */
+    display: flex; /* Habilita Flexbox para alinear logo y nav */
     justify-content: space-between; /* Empuja el logo a la izquierda y el nav a la derecha */
-    align-items: center; /* Centra verticalmente el logo y los elementos del nav */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
-/* Eliminamos el estilo para .logo-title-group */
-
-/* Estilos para el logo GRANDE (anteriormente .logo-mediano o .logo-peque) */
-.logo-grande { /* Usamos la nueva clase "logo-grande" */
-    height: 100px; /* <--- VALOR AJUSTADO PARA UN LOGO MÁS GRANDE (ajusta si es necesario) */
+/* Estilos para el logo grande */
+.logo-grande {
+    height: 100px; /* Tamaño del logo */
     width: auto; /* Mantiene la proporción */
-    margin-right: 0; /* Asegura que no haya margen derecho */
+    margin-right: 0;
     vertical-align: middle;
 }
 
-/* Eliminamos los estilos para .cajaNav h2 */
-
+/* Estilos para la navegación */
 nav{
-    position: static; /* Restablecemos a estático, flexbox se encarga */
+    position: static; /* Restablece a estático, flexbox se encarga */
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Quita los puntos de la lista */
     padding: 0;
     margin: 0;
-    display: flex; /* Para que los ítems del menú sigan en línea */
+    display: flex; /* Para que los ítems del menú estén en línea */
 }
 
 nav li{
-    display: inline;
+    display: inline; /* Asegura que los ítems sean en línea */
     margin-left: 25px; /* Espacio entre los ítems del menú */
 }
+
 nav a{
-    text-decoration: none;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Texto en mayúsculas */
     font-size: 18px;
     font-weight: bold;
     padding: 5px 0;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transición suave al pasar el ratón */
 }
 
 nav a:hover{
-    text-decoration: underline;
-    color: white;
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    color: white; /* Color blanco al pasar el ratón */
 }
 
-
+/* Estilos para el título de bienvenida */
 .bienvenida{
     text-align: center;
     margin-top: 50px;
     font-size: 30px;
     color: #333;
 }
+
+/* Estilos para el párrafo principal */
 .pPrincipal{
     text-align: center;
     margin-top: 20px;
@@ -78,7 +79,7 @@ nav a:hover{
     color: #555;
 }
 
-
+/* Estilos para el campo de búsqueda */
 .busqueda{
     display: block;
     margin-bottom: 20px;
@@ -90,26 +91,159 @@ nav a:hover{
     margin-right: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto */
 }
 
+/* Estilos para el botón de enviar (Buscar) */
 input[type="submit"] {
     display: block;
     margin: 0 auto 20px auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Color de fondo verde */
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor a una mano */
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Verde más oscuro al pasar el ratón */
 }
 
+/* Estilos para la sección de la galería de imágenes */
+.seccion-galeria {
+    margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
+    padding: 20px;
+    max-width: 1200px; /* Ancho máximo para la galería */
+    text-align: center; /* Centra el título */
+}
+
+.titulo-galeria {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Contenedor principal de los libros - usa Flexbox */
+.galeria-libros {
+    display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no caben */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 5px; /* Espacio entre los items, ajustado para que estén más juntos */
+    padding: 20px 0;
+}
+
+/* Estilo para cada item de libro individual */
+.item-libro {
+    flex-basis: 200px; /* Ancho base para cada item */
+    flex-shrink: 0; /* Evita que los items se encojan más allá de su base */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+.item-libro:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+}
+
+.item-libro img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .cajaNav {
+        flex-direction: column; /* Apila el logo y el nav */
+        align-items: center; /* Centra todo el contenido apilado */
+        padding: 10px 15px;
+    }
+
+    .logo-grande { /* Ajuste de tamaño para tabletas */
+        height: 80px; /* Un poco más pequeño que en desktop */
+        margin-bottom: 15px; /* Espacio entre el logo y el nav apilado */
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        transform: none;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;
+        display: block;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .bienvenida {
+        font-size: 24px;
+    }
+
+    .pPrincipal {
+        font-size: 16px;
+    }
+
+    .busqueda {
+        width: 80%;
+    }
+
+    .galeria-libros {
+        gap: 5px; /* Mantener el espacio reducido en pantallas pequeñas */
+    }
+    .item-libro {
+        flex-basis: calc(50% - 10px); /* Dos columnas en tablets, ajustando por el nuevo gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grande { /* Ajuste de tamaño para móviles pequeños */
+        height: 60px; /* Más pequeño aún en móviles muy pequeños */
+    }
+
+    .bienvenida {
+        font-size: 20px;
+    }
+
+    .pPrincipal {
+        font-size: 14px;
+    }
+
+    .busqueda {
+        width: 90%;
+        padding: 8px 10px;
+    }
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .item-libro {
+        flex-basis: 100%; /* Una columna en móviles */
+    }
+    .titulo-galeria {
+        font-size: 1.8em;
+    }
+}
 
 /* Estos estilos no estaban en tu HTML actual, pero los mantengo por si los usarás en otras páginas */
 .ubicacion{
@@ -152,83 +286,4 @@ form label,form p{
 form{
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-/* Media Queries para Responsividad */
-
-@media (max-width: 768px) {
-    .cajaNav {
-        flex-direction: column; /* Apila el logo y el nav */
-        align-items: center; /* Centra todo el contenido apilado */
-        padding: 10px 15px;
-    }
-
-    /* Eliminamos .logo-title-group media query styles */
-
-    .logo-grande { /* Ajuste de tamaño para tabletas */
-        height: 80px; /* Un poco más pequeño que en desktop */
-        margin-bottom: 15px; /* Espacio entre el logo y el nav apilado */
-    }
-
-    /* Eliminamos .cajaNav h2 media query styles */
-
-    nav {
-        position: static;
-        width: 100%;
-        transform: none;
-        text-align: center;
-        margin-top: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 8px 0;
-        display: block;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 8px 0;
-    }
-
-    .bienvenida {
-        font-size: 24px;
-    }
-
-    .pPrincipal {
-        font-size: 16px;
-    }
-
-    .busqueda {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-grande { /* Ajuste de tamaño para móviles pequeños */
-        height: 60px; /* Más pequeño aún en móviles muy pequeños */
-    }
-
-    /* Eliminamos .cajaNav h2 media query styles */
-
-    .bienvenida {
-        font-size: 20px;
-    }
-
-    .pPrincipal {
-        font-size: 14px;
-    }
-
-    .busqueda {
-        width: 90%;
-        padding: 8px 10px;
-    }
-    input[type="submit"] {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
 }
